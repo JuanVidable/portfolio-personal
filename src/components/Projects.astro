@@ -3,19 +3,20 @@ import GitHub from "./icons/GitHub.astro"
 
 const { title } = Astro.props
 const { img } = Astro.props
+const { description } = Astro.props
 ---
 
 <div class="">
     <article class="flex mt-10">
-        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden" id="card">
             <a href="#">
                 <img class="rounded-t-lg transition hover:scale-105" src={ img } alt="" />
             </a>
             <div class="p-5">
                 <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">API Rest</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{ title }</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">API Rest desarrollada con .NET conectada a una base de datos MySQL a través del framework Express.</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{ description }</p>
                 <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
                     <p class="pr-2">Ver código</p>
                      <GitHub></GitHub>
@@ -25,3 +26,7 @@ const { img } = Astro.props
     </article>
     
 </div>
+
+<style>
+    
+</style>

@@ -5,7 +5,7 @@ import VideoBackground from '../components/VideoBackground.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Name from '../components/Name.astro'
 import Projects from '../components/Projects.astro'
-
+import Studies from '../components/Studies.astro'
 ---
 
 <Layout title="MiniPortfolio">
@@ -17,18 +17,29 @@ import Projects from '../components/Projects.astro'
 			<Name />
 		</div>
 		<SectionContainer>
-			<h1 class="text-white text-5xl"> Proyectos </h1>
+			<h2 class="text-white text-5xl"> Proyectos </h1>
 			
 			<div class="flex gap-4">
 				<Projects
+					title="API Rest"
+					description="API Rest desarrollada con .NET conectada a una base de datos MySQL a través del framework Express."
 					img='/ApiRest.webp'
-					title="asd"
 				/>
 				<Projects
+					title="Web Scrap"
+					description="Plantilla Web hecha con HTML, CSS y PHP para el scraping de datos con el buscador."
 					img='/Scrap.webp'
-					title="asd"
+				/>
+				<Projects
+					title="ChatBot de WhatsApp"
+					description="Uso de proyecto open source para el desarrollo de un chatbot de WhatsApp para la empresa Pi Real Estate."
+					img='/Scrap.webp'
 				/>
 			</div>
+		</SectionContainer>
+		<SectionContainer>
+			<h2 class="text-white text-5xl">Estudios</h1>
+				<Studies></Studies>
 		</SectionContainer>
 	</main>
 	

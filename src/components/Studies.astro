@@ -1,21 +1,28 @@
 ---
-
+const { university } = Astro.props
+const { title } = Astro.props
+const { period } = Astro.props
+const { logo } = Astro.props
 ---
 
-<div class="flex">
-    <div>
-        <img src="/UTN_logo.jpg" alt="" srcset="" class="max-w-24 ">
-    </div>
-    <div class="flex flex-col justify-center text-white">
-        <h3>UTN</h3>
-        <strong>Tecnicatura en programacion</strong>
-        <span>ene. 2021 - En curso</span>
-    </div>
+<div class="">
+    <article class="flex gap-4 border-solid border-2 border-gray-700 max-w-base px-4 py-2 bg-gray-800 rounded-xl">
+        
+            <div class="flex justify-center">
+                <img src={logo} alt="" srcset="" class="max-w-24 max-h-24 text-center m-auto">
+            </div>
+            <div class="flex flex-col justify-center text-white">
+                <h3 class="text-2xl font-bold">{university}</h3>
+                <span class="text-xl font-light text-gray-400">{title}</span>
+                <span class="text-base font-light text-gray-500">{period}</span>
+            </div>
+            <div>
+                asdasd
+            </div>
+        
+    </article>
 </div>
 
 <style>
-    img{
-        mix-blend-mode: multiply;
-    }
     
 </style>

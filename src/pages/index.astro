@@ -6,6 +6,7 @@ import SectionContainer from '../components/SectionContainer.astro'
 import Name from '../components/Name.astro'
 import Projects from '../components/Projects.astro'
 import Studies from '../components/Studies.astro'
+import About from '../components/About.astro';
 ---
 
 <Layout title="MiniPortfolio">
@@ -34,6 +35,7 @@ import Studies from '../components/Studies.astro'
 					title="ChatBot de WhatsApp"
 					description="Uso de proyecto open source para el desarrollo de un chatbot de WhatsApp para la empresa Pi Real Estate."
 					img='/chatbot.png'
+					icon
 				/>
 			</div>
 		</SectionContainer>
@@ -48,7 +50,7 @@ import Studies from '../components/Studies.astro'
 					/>
 					<Studies
 						university="Universidad Tecnológica Nacional Chaco"
-						title="Desarrollador de VideJuegos"
+						title="Desarrollador de VideoJuegos"
 						period="ene. 2021 - En curso"
 						logo="/utn_blanco.png"
 					/>
@@ -57,6 +59,7 @@ import Studies from '../components/Studies.astro'
 		</SectionContainer>
 		<SectionContainer>
 			<h2 class="text-white text-5xl">Sobre Mi</h2>
+			<About/>
 		</SectionContainer>
 	</main>
 	

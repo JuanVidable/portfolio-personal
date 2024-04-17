@@ -7,6 +7,9 @@ import Name from '../components/Name.astro'
 import Projects from '../components/Projects.astro'
 import Studies from '../components/Studies.astro'
 import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Technologies from '../components/Technologies.astro';
+import Footer from '../components/Footer.astro'
 ---
 
 <Layout title="MiniPortfolio">
@@ -18,13 +21,17 @@ import About from '../components/About.astro';
 			<Name />
 		</div>
 		<SectionContainer id="projects">
-			<h2 class="text-white text-5xl"> Proyectos </h1>
+			<div class="flex items-center">
+				<h2 class="text-white text-5xl px-5"> Proyectos </h2>
+				<div class="flex-1 border-t-2 border-gray-200"></div>
+			</div>
 			
 			<div class="flex gap-4">
 				<Projects
 					title="API Rest"
-					description="API Rest desarrollada con .NET conectada a una base de datos MySQL a través del framework Express."
+					description="API Rest desarrollada con NodeJS conectada a una base de datos MySQL a través del framework Express."
 					img='/ApiRest.webp'
+					
 				/>
 				<Projects
 					title="Web Scrap"
@@ -35,32 +42,54 @@ import About from '../components/About.astro';
 					title="ChatBot de WhatsApp"
 					description="Uso de proyecto open source para el desarrollo de un chatbot de WhatsApp para la empresa Pi Real Estate."
 					img='/chatbot.png'
-					icon
 				/>
 			</div>
 		</SectionContainer>
 		<SectionContainer id="studies">
-			<h2 class="text-white text-5xl">Estudios</h1>
+			<div class="flex items-center">
+				<h2 class="text-white text-5xl px-5"> Estudios </h2>
+				<div class="flex-1 border-t-2 border-gray-200"></div>
+			</div>
 				<div class="flex gap-3 my-10 flex-col">
 					<Studies
+						id="asd"
 						university="Universidad Tecnológica Nacional Mendoza"
 						title="Tecnicatura superior en Programación"
 						period="Agosto 2021 - En curso"
 						logo="/utn_blanco.png"
+						
 					/>
 					<Studies
 						university="Universidad Tecnológica Nacional Chaco"
 						title="Desarrollador de VideoJuegos"
-						period="ene. 2021 - En curso"
+						period="Junio 2021 - Agosto 2021"
 						logo="/utn_blanco.png"
 					/>
 					
 				</div>
 		</SectionContainer>
+		<SectionContainer>
+			<div class="flex items-center">
+				<h2 class="text-white text-5xl px-5"> Tecnologías </h2>
+				<div class="flex-1 border-t-2 border-gray-200"></div>
+			</div>
+			<Technologies/>
+		</SectionContainer>
 		<SectionContainer id="about">
-			<h2 class="text-white text-5xl">Sobre Mi</h2>
+			<div class="flex items-center">
+				<h2 class="text-white text-5xl px-5"> Sobre mi </h2>
+				<div class="flex-1 border-t-2 border-gray-200"></div>
+			</div>
 			<About/>
 		</SectionContainer>
+		<SectionContainer id="contacto">
+			<div class="flex items-center">
+				<h2 class="text-white text-5xl px-5"> Contacto </h2>
+				<div class="flex-1 border-t-2 border-gray-200"></div>
+			</div>
+			<Contact/>
+		</SectionContainer>
+		<Footer/>
 	</main>
 	
 	
@@ -71,6 +100,9 @@ import About from '../components/About.astro';
 		height: 100vh;
 		position: inherit;
 		
+	}
+	#asd{
+		background-color: red;
 	}
 	
 </style>

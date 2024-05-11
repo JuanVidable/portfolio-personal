@@ -12,26 +12,53 @@ import Mongo from "./icons/Mongo.astro";
 ---
 
 <div>
-    <p class="text-white my-5">Tecnologías que he aprendido a medida del tiempo, tanto en la universidad como por cuenta propia.</p>
-    <div class="flex justify-around gap-5 w-full my-8">
-        <div class="flex">
+    <p class="text-white my-5" id="text">Tecnologías que he aprendido a medida del tiempo, tanto en la universidad como por cuenta propia.</p>
+    <div class="flex justify-around gap-5 w-full my-8" id="container">
+        <div class="flex text-white font-bold items-center">
             <ReactIcon/>
             <AstroIcon/>
             <Tailwind/>
+            <p class="mx-5 lg:hidden" id="tec">Front-end</p>
         </div>
-        <div class="flex gap-4">
+        <div class="flex gap-4 text-white font-bold items-center">
             <Java/>
             <Spring/>
             <CSharp/>
             <NET/>
+            <p class="mx-5 lg:hidden" id="tec">Back-end</p>
         </div>
-        <div class="flex gap-4">
+        <div class="flex gap-4 text-white font-bold items-center">
           
             <MySQL/>
             <Mongo/>
+            <p class="mx-5 lg:hidden" id="tec">Bases de datos</p>
         </div>
-        <div class="flex gap-4">
+        <div class="flex gap-4 text-white font-bold items-center">
             <Unity/>
+            <p class="mx-5 lg:hidden" id="tec">Otros</p>
         </div>
     </div>
 </div>
+
+<style>
+    @media (max-width: 1024px){
+        #container{
+            flex-direction: column;
+            gap: 30px; 
+            margin-left: 50px;
+        }
+        #text{
+            margin: 0 50px;
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: 520px){
+        #container{
+            margin-left: 0;
+            
+        }
+        #tec{
+            font-size: 12px;
+        }
+    }
+</style>

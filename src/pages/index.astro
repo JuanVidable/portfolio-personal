@@ -10,9 +10,10 @@ import About from '../components/About.astro';
 import Contact from '../components/Contact.astro';
 import Technologies from '../components/Technologies.astro';
 import Footer from '../components/Footer.astro'
+import Link from '../components/icons/Link.astro';
 ---
 
-<Layout title="MiniPortfolio">
+<Layout title="Juan Vidable">
 	
 	<main>
 		<div class="video-container" >
@@ -26,23 +27,32 @@ import Footer from '../components/Footer.astro'
 				<div class="flex-1 border-t-2 border-gray-200"></div>
 			</div>
 			
-			<div class="flex gap-4">
+			<div class="flex gap-4 " id="projects">
 				<Projects
 					title="API Rest"
 					description="API Rest desarrollada con NodeJS conectada a una base de datos MySQL a través del framework Express."
 					img='/ApiRest.webp'
-					
+					link="https://github.com/JuanVidable/api-rest-nodejs"
 				/>
 				<Projects
 					title="Web Scrap"
 					description="Plantilla Web hecha con HTML, CSS y PHP para el scraping de datos con el buscador."
 					img='/Scrap.webp'
+					link="https://github.com/JuanVidable/scraping-abogado"
 				/>
 				<Projects
 					title="ChatBot de WhatsApp"
 					description="Uso de proyecto open source para el desarrollo de un chatbot de WhatsApp para la empresa Pi Real Estate."
 					img='/chatbot.png'
+					link="https://github.com/JuanVidable/whatsapp-chatbot"
 				/>
+				
+			</div>
+			<div class="text-center my-10">
+				<a href="https://github.com/JuanVidable?tab=repositories" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+					<p class="pr-2">Ver más</p>
+					<Link/>
+				</a>
 			</div>
 		</SectionContainer>
 		<SectionContainer id="studies">
@@ -68,7 +78,7 @@ import Footer from '../components/Footer.astro'
 					
 				</div>
 		</SectionContainer>
-		<SectionContainer>
+		<SectionContainer id="technologies">
 			<div class="flex items-center">
 				<h2 class="text-white text-5xl px-5"> Tecnologías </h2>
 				<div class="flex-1 border-t-2 border-gray-200"></div>
@@ -104,5 +114,28 @@ import Footer from '../components/Footer.astro'
 	#asd{
 		background-color: red;
 	}
-	
+	@media(max-width: 640px){
+		#projects{
+			flex-direction: column;
+			
+		}
+		
+    }
+	@media (max-width: 520px){
+        h1{
+            font-size: 48px;
+        }
+        p{
+            font-size: 18px;
+        }
+		h2{
+			font-size: 32px;
+		}
+		h5{
+			font-size: 24px
+		}
+		h3{
+			font-size: 28px;
+		}
+    }
 </style>

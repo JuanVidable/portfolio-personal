@@ -1,9 +1,9 @@
-<header class="">
-    <nav >
+<header class="lg:">
+    <nav>
         <ul>
             <li><a href="#projects">Proyectos</a></li>
             <li><a href="#studies">Estudios</a></li>
-            <li><a href="#contacto">Tecnologías</a></li>
+            <li><a href="#technologies">Tecnologías</a></li>
             <li><a href="#about">Sobre mi</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -38,6 +38,7 @@
         justify-content:space-around;
         text-align: center;
         padding-left: 0;
+        gap: 20px;
     }
     a{
         text-decoration: none;
@@ -48,5 +49,9 @@
         color: rgba(155, 155, 155, 0.822);
         transition: 300ms;
     }
-    
+    @media (max-width: 520px){
+        a{
+            font-size: 12px;
+        }
+    }
 </style>

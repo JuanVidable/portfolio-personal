@@ -4,9 +4,10 @@ import GitHub from "./icons/GitHub.astro"
 const { title } = Astro.props
 const { img } = Astro.props
 const { description } = Astro.props
+const { link } = Astro.props
 ---
 
-<div class="">
+<div class="m-auto ">
     <article class="flex mt-10 h-96">
         <div class="max-w-sm  border  rounded-lg shadow bg-gray-800 border-gray-700 overflow-hidden" id="card">
             <a href="#">
@@ -17,7 +18,7 @@ const { description } = Astro.props
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{ title }</h5>
                 </a>
                 <p class="mb-3 font-normal text-xs text-gray-700 dark:text-gray-400">{ description }</p>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+                <a href={link} target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-600 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
                     <p class="pr-2">Ver código</p>
                      <GitHub></GitHub>
                 </a>
